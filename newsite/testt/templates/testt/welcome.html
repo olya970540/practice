@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% csrf_token %}
+
+{% block content %}
+
+<h5>Добро пожаловать, {{ user.get_full_name }}! Вы успешно вошли в учетную запись</h5>
+<h5>Ваш email: {{ user.email }}</h5>
+
+
+{% endblock %}

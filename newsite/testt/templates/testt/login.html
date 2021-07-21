@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block title %}
+
+Войти :: {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+<h1>Вход</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primery btn-block">Войти</button>
+</form>
+
+{% endblock %}
